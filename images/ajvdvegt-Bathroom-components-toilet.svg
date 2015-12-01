@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg4084"
+   viewBox="0 0 29 29"
+   version="1.0"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="ajvdvegt-Bathroom-components-toilet.svg">
+  <defs
+     id="defs3898" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="721"
+     id="namedview3896"
+     showgrid="false"
+     inkscape:zoom="15.475773"
+     inkscape:cx="15.232658"
+     inkscape:cy="15.086495"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4084" />
+  <g
+     id="toilet"
+     inkscape:label="#g4419">
+    <path
+       sodipodi:nodetypes="cssccc"
+       id="path5029"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.49131283"
+       d="m 11.37161,28.10817 c 0,0 -7.1944924,-5.189988 -7.0438232,-17.011779 C 4.392284,6.0358189 6.7663359,0.40869976 15.138307,0.40869976 c 8.249141,0 9.672311,6.02677044 10.07355,10.68769124 0.272004,12.468131 -6.791762,17.076396 -6.791762,17.076396 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path5031"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.49131283"
+       d="m 23.369433,13.615188 c 0,5.122756 -3.822414,9.274349 -8.537378,9.274349 -4.716604,0 -8.539017,-4.151593 -8.539017,-9.274349 0,-5.1227544 3.822413,-9.2759863 8.539017,-9.2759863 4.714964,0 8.537378,4.1532319 8.537378,9.2759863 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path5033"
+       style="fill:#6464ff;fill-opacity:1;stroke:#000000;stroke-width:0.49131283"
+       d="m 12.067601,11.096391 c 0,0 0.519154,-0.977712 2.764454,-1.044859 2.274778,-0.067152 2.764454,1.044859 2.764454,1.044859 v 6.511533 c 0,0 0.427442,0.763173 -2.764454,0.73697 -3.223012,-0.02621 -2.764454,-0.73697 -2.764454,-0.73697 v -6.511533 z"
+       inkscape:connector-curvature="0" />
+  </g>
+  <metadata
+     id="metadata3894">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Bathroom components - toilet</dc:title>
+        <dc:date>2008-08-27T21:11:16</dc:date>
+        <dc:description>A few parts from my bathroom design based on the pen-and-paper sketch the design studio made me.</dc:description>
+        <dc:source>https://openclipart.org/detail/18709/bathroom-components---toilet-by-ajvdvegt</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ajvdvegt</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>bath</rdf:li>
+            <rdf:li>bathroom</rdf:li>
+            <rdf:li>design</rdf:li>
+            <rdf:li>interior</rdf:li>
+            <rdf:li>toilet</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
