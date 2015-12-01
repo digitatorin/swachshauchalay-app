@@ -1,73 +1,75 @@
 package in.diyfix.swachsauchalay;
 
-import android.app.Activity;
-import android.view.View;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.content.Intent;
 
-import org.osmdroid.views.MapView;
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
-import org.osmdroid.api.IMapController;
-import org.osmdroid.util.GeoPoint;
-import org.osmdroid.bonuspack.overlays.Marker;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
-    /** Called when the activity is first created. */
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+ 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        MapView map = (MapView) findViewById(R.id.map);
-        map.setTileSource(TileSourceFactory.MAPNIK);
-        map.setBuiltInZoomControls(true);
-        map.setMultiTouchControls(true);
-        IMapController mapController = map.getController();
-        GeoPoint elan = new GeoPoint(12.917907, 77.673657);
-        mapController.setZoom(9);
-        mapController.setCenter(elan);
-        Marker pt = new Marker(map);
-        pt.setPosition(elan);
-        pt.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        pt.setIcon(getResources().getDrawable(R.drawable.toilet));
-        pt.setTitle("Start");
-        map.getOverlays().add(pt);
+        setContentView(R.layout.activity_main);
+ 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+ 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ 
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
+        viewPager.setCurrentItem(1);
+ 
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
-
-    public void navigateToLogin(View view) {
-        setContentView(R.layout.login);
+ 
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new RateToiletFragment(), "Rate");
+        adapter.addFragment(new MapFragment(), "Map");
+        adapter.addFragment(new FindToiletFragment(), "Find");
+        viewPager.setAdapter(adapter);
     }
-
-    public void navigateToMain(View view) {
-        setContentView(R.layout.main);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.rate_toilet:
-                startActivity( new Intent(this, RateToiletActivity.class));
-                return true;
-            case R.id.find:
-                startActivity(new Intent(this, SearchToiletActivity.class));
-                return true;
-            case R.id.help:
-                startActivity(new Intent(this, HelpActivity.class));
-                return true;
-        
+ 
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+ 
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
         }
-        return false;
+ 
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+ 
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+ 
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+ 
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 }

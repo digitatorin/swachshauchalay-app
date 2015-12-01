@@ -16,9 +16,14 @@ allprojects {
             dirs 'libs'
         }
     }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+
 }
-
-
 
 android {
     compileSdkVersion 'android-23'
@@ -35,6 +40,7 @@ android {
         compile(name:'osmbonuspack_v5.5', ext:'aar')
         compile 'org.osmdroid:osmdroid-android:5.0.1@aar'
         compile 'com.android.support:appcompat-v7:23.1.0'
+        compile 'com.android.support:design:23.0.1'
         compile 'org.apache.commons:commons-lang3:3.3.2'
         compile 'com.google.code.gson:gson:2.3'
         compile 'com.loopj.android:android-async-http:1.4.9'
