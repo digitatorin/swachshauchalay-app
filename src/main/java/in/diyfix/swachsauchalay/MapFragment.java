@@ -28,7 +28,7 @@ public class MapFragment extends Fragment implements LocationListener {
     private MapView mMapView;
     private Location mCurrentLocation;
     private Marker mUserMarker;
-    private static final String TAG = "SwachSauchalayMapFragment";
+    private static final String TAG = "SwachShauchalayMapFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
