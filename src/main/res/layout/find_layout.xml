@@ -3,10 +3,14 @@
    android:layout_width="match_parent"  
    android:layout_height="match_parent"
    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find this"
-        />
-
+   <TextView
+       android:text="Stuff here"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       />
+   <ListView
+       android:id="@id/android:list"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       />
 </RelativeLayout>
